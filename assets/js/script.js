@@ -1,11 +1,16 @@
 const srcLinks = [
     {
-        src:"./propiedades_venta.html",
+        href:"./index.html",
+        titulo: 'Inmobiliaria ADL',
+        seccion: 'index'
+    },    
+    {
+        href:"./propiedades_venta.html",
         titulo: 'En venta',
         seccion: 'ventas'
     },
     {
-        src:"./propiedades_alquiler.html",
+        href:"./propiedades_alquiler.html",
         titulo: 'Alquiler',
         seccion: 'alquiler'
     }
@@ -20,7 +25,7 @@ const propiedadesVentas = [
         descripcion: 'Este apartamento de lujo está ubicado en una exclusiva zona residencial ',
         ubicacion: ' 123 Luxury Lane, Prestige Suburb, CA 45678 ',
         habitaciones: 4,
-        toilet: 4,
+        sanitario: 4,
         costo: 5000,
         smoke: false,
         pets: false
@@ -32,7 +37,7 @@ const propiedadesVentas = [
         descripcion: 'Este apartamento acogedor está situado en lo alto de una montaña con impresionantes vistas ',
         ubicacion: ' 789 Mountain Road, Summit Peaks, CA 23456 ',
         habitaciones: 2,
-        toilet: 1,
+        sanitario: 1,
         costo: 1200,
         smoke: true,
         pets: true
@@ -44,7 +49,7 @@ const propiedadesVentas = [
         descripcion: 'Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares ',
         ubicacion: ' 567 Skyline Avenue, Skyview City, CA 56789 ',
         habitaciones: ' 3 Habitaciones ',
-        toilet: 3,
+        sanitario: 3,
         costo: 4500,
         smoke: false,
         pets: true
@@ -56,7 +61,7 @@ const propiedadesVentas = [
         descripcion: 'Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares ',
         ubicacion: ' 567 Skyline Avenue, Skyview City, CA 56789 ',
         habitaciones: 3,
-        toilet: 3,
+        sanitario: 3,
         costo: 4500,
         smoke: false,
         pets: true
@@ -68,7 +73,7 @@ const propiedadesVentas = [
         descripcion: 'Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares ',
         ubicacion: ' 567 Skyline Avenue, Skyview City, CA 56789 ',
         habitaciones: 3,
-        toilet: 3,
+        sanitario: 3,
         costo: 4500,
         smoke: false,
         pets: true
@@ -79,11 +84,11 @@ const propiedadesAlquiler = [
     {
         src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
         alt: 'Imagen del departamento',
-        titulo: 'Apartamento en el centro de la ciudad ',
+        nombre: 'Apartamento en el centro de la ciudad ',
         descripcion: 'Este apartamento de 2 habitaciones está ubicado en el corazón de la ciudad, cerca de todo. ',
         ubicacion: ' 123 Main Street, Anytown, CA 91234 ',
         habitaciones: ' 2 Habitaciones ',
-        toilet: 2,
+        sanitario: 2,
         costo: 2000,
         smoke: false,
         pets: true
@@ -91,11 +96,11 @@ const propiedadesAlquiler = [
     {
         src: "https://images.unsplash.com/photo-1669071192880-0a94316e6e09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: 'Imagen del departamento',
-        titulo: 'Apartamento luminoso con vista al mar ',
+        nombre: 'Apartamento luminoso con vista al mar ',
         descripcion: 'Este hermoso apartamento ofrece una vista impresionante al mar ',
         ubicacion: ' 456 Ocean Avenue, Seaside Town, CA 56789 ',
         habitaciones: ' 3 Habitaciones',
-        toilet: 3,
+        sanitario: 3,
         costo: 2500,
         smoke: true,
         pets: true
@@ -103,11 +108,11 @@ const propiedadesAlquiler = [
     {
         src: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
         alt: 'Imagen del departamento',
-        titulo: 'Condominio moderno en zona residencial ',
+        nombre: 'Condominio moderno en zona residencial ',
         descripcion: 'Este elegante condominio moderno está ubicado en una tranquila zona residencial ',
         ubicacion: ' 123 Main Street, Anytown, CA 91234 ',
         habitaciones: ' 2 Habitaciones',
-        toilet: 2,
+        sanitario: 2,
         costo: 2200,
         smoke: false,
         pets: false
@@ -115,48 +120,75 @@ const propiedadesAlquiler = [
     {
         src: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
         alt: 'Imagen del departamento',
-        titulo: 'Condominio moderno en zona residencial ',
+        nombre: 'Condominio moderno en zona residencial ',
         descripcion: 'Este elegante condominio moderno está ubicado en una tranquila zona residencial ',
         ubicacion: ' 123 Main Street, Anytown, CA 91234 ',
         habitaciones: ' 2 Habitaciones',
         toilet: 2,
-        costo: 2200,
+        sanitario: 2200,
         smoke: false,
         pets: false
     },
     {
         src: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmRvfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60",
         alt: 'Imagen del departamento',
-        titulo: 'Condominio moderno en zona residencial ',
+        nombre: 'Condominio moderno en zona residencial ',
         descripcion: 'Este elegante condominio moderno está ubicado en una tranquila zona residencial ',
         ubicacion: ' 123 Main Street, Anytown, CA 91234 ',
         habitaciones: ' 2 Habitaciones',
-        toilet: 2,
+        sanitario: 2,
         costo: 2200,
         smoke: false,
         pets: false
     }
 ];
 
+const botones = [
+      {
+        href:"./propiedades_venta.html",
+        titulo: 'Ver todas las propiedades en venta',
+        seccion: 'ventas'
+    },
+    {
+        href:"./propiedades_alquiler.html",
+        titulo: 'Ver todas las propiedades en alquiler',
+        seccion: 'alquiler'
+    }
+]
 
-// Menú superior
-const links = document.querySelector('.navbar-nav');
-let template = '';
 
+// MENÚ SUPERIOR
+const linksInd = document.querySelector('.nav-index');
+let templateInd = '';
 for (const srcLink of srcLinks) {
-    template += `<li class="nav-item">
-                <a class="nav-link" href="${srcLink.src}">${srcLink.titulo}</a></li>`;
+  if (srcLink.seccion ==='index') {
+    templateInd += `<a class="navbar-brand" href="${srcLink.href}">${srcLink.titulo}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">`
+  } else {
+    templateInd += `<li class="nav-item">
+                <a class="nav-link" href="${srcLink.href}">${srcLink.titulo}</a></li>`;
+  }
 }
+templateInd += '</ul></div>';
+linksInd.innerHTML= templateInd;
 
-links.innerHTML= template;
 
-
-
-// Propiedades en venta
+// PROPIEDADES EN VENTA
 const cardsVenta = document.querySelector('.rowVenta')
 let templateVenta = ''
 let counter = 0
-
 for (const propVenta of propiedadesVentas) {
   if (counter < 3) {
     templateVenta += `<div class="col-md-4 mb-4">
@@ -178,7 +210,7 @@ for (const propVenta of propiedadesVentas) {
                 </p>
                 <p>
                   <i class="fas fa-bed"></i> ${propVenta.habitaciones} Habitaciones |
-                  <i class="fas fa-bath"></i> ${propVenta.toilet} Baños
+                  <i class="fas fa-bath"></i> ${propVenta.sanitario} Baños
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${propVenta.costo}</p>`;
  
@@ -208,16 +240,15 @@ for (const propVenta of propiedadesVentas) {
                       </div>`
                 }   
               counter++;
-                }
   }
+}
 cardsVenta.innerHTML= templateVenta;
 
 
-// Propiedades en alquiler
+// PROPIEDADES EN ALQUILER
 const cardsAlq = document.querySelector('.rowAlq')
 let templateAlq = ''
 let countAlq = 0
-
 for (const propAlq of propiedadesAlquiler) {
   if (countAlq < 3) {
     templateAlq += `<div class="col-md-4 mb-4">
@@ -229,7 +260,7 @@ for (const propAlq of propiedadesAlquiler) {
               />
               <div class="card-body">
                 <h5 class="card-title">
-                  ${propAlq.titulo}
+                  ${propAlq.nombre}
                 </h5>
                 <p class="card-text">
                   ${propAlq.descripcion}
@@ -239,7 +270,7 @@ for (const propAlq of propiedadesAlquiler) {
                 </p>
                 <p>
                   <i class="fas fa-bed"></i> ${propAlq.habitaciones} Habitaciones |
-                  <i class="fas fa-bath"></i> 2${propAlq.toilet} Baños
+                  <i class="fas fa-bath"></i> ${propAlq.sanitario} Baños
                 </p>
                 <p><i class="fas fa-dollar-sign"></i> ${propAlq.costo}</p>`
                 if (propAlq.smoke) {
@@ -270,5 +301,22 @@ for (const propAlq of propiedadesAlquiler) {
   }
 }
 cardsAlq.innerHTML= templateAlq;
+
+const botonV = document.querySelector('.botonV')
+const botonA = document.querySelector('.botonA')
+let tempBtnV = ''
+let tempBtnA = ''
+
+for (const btn of botones) {
+  if (btn.seccion === 'ventas') {
+    tempBtnV = `<a href="${btn.href}" class="btn btn-dark">
+          ${btn.titulo}</a>`
+  } else {
+    tempBtnA = `<a href="${btn.href}" class="btn btn-dark">
+          ${btn.titulo}</a>`
+  }
+}
+botonV.innerHTML= tempBtnV; 
+botonA.innerHTML= tempBtnA;
 
 
